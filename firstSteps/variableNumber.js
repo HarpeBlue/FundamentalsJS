@@ -16,11 +16,11 @@ var jugarAlFutbol = 3
 
 peso -= jugarAlFutbol
 
-var precioDeVino = 200.3
+var precioDeVino = 2.15
 
 //var total = precioDeVino * 3 // esto me da muchos decimales pero podemos arreglarlo con este calculo
 
-var total = Math.round(precioDeVino * 100 * 3) / 100
+var total = precioDeVino * 3
 
 console.log(total)
 
@@ -31,7 +31,8 @@ console.log(totalStr);
 
 // para pasarlo a numero decimal usamos parseFloat
 
-var total2 = Number(totalStr);
+var total2 = parseFloat(totalStr);
+console.log(total2)
 
 var pizza = 8
 var persona = 2
