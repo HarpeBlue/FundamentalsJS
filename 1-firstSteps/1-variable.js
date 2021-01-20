@@ -1,8 +1,8 @@
 console.log('Hello world JS');
 
-var nombre = 'Harold', apellido = 'Peñaloza';
+let nombre = 'Harold', apellido = 'Peñaloza';
 
-var edad = 28;
+let edad = 28;
 
 console.log(`Hola ${nombre} ${apellido}`);
 

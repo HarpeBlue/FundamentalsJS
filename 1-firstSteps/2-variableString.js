@@ -12,22 +12,22 @@ var apellidoEnMinuscula = apellido.toLowerCase();
 
 console.log(apellidoEnMinuscula);
 
-// Buscar caracteres en un string, si lleva parámetro.
+// Buscar caracteres en un string, si lleva parámetro. nos respeta lo que tengamos en la letra, estilo upper o lower
 
 var primeraLetraDelNombre = nombre.charAt(0);
 
 console.log(primeraLetraDelNombre);
 
-// Para saber cuántos caracteres tiene.
+// Para saber cuántos caracteres tiene.Tiene que se actualizado.
 
 var cantidadDeLetrasDelNombre = nombre.length;
 
 console.log(cantidadDeLetrasDelNombre);
 
 
-// Concatenar strings, dentro de las llaves podemos escribir códifo JS-
+// Concatenar strings, dentro de las llaves podemos escribir códifo JS- template literal.
 
-var nombreCompleto = `${nombre} ${apellido}`;
+var nombreCompleto = `${nombre} ${apellido.toUpperCase}`;
 
 console.log(nombreCompleto);
 

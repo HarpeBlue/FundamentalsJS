@@ -20,7 +20,7 @@ var precioDeVino = 2.15
 
 //var total = precioDeVino * 3 // esto me da muchos decimales pero podemos arreglarlo con este calculo
 
-var total = precioDeVino * 3
+var total = Math.round(precioDeVino * 100 * 3) / 100
 
 console.log(total)
 

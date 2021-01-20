@@ -10,19 +10,19 @@ var dario = {
   edad: '27'
 }
 
-function imprimirNombreEnMayúscula(persona) {
+function imprimirNombreEnMayuscula(persona) {
   // var nombre = persona.nombre
   var { nombre } = persona;
   console.log(nombre.toUpperCase());
 }
 
-imprimirNombreEnMayúscula(harold);
-imprimirNombreEnMayúscula(dario);
-imprimirNombreEnMayúscula({ nombre: 'Pepito' });
+imprimirNombreEnMayuscula(harold);
+imprimirNombreEnMayuscula(dario);
+imprimirNombreEnMayuscula({ nombre: 'Pepito' });
 
 // Los objetos se pasan por referencia en los parámetros de una función no como las variables normales.
 // Para evitar esto podemos retornar un objeto nuevo.
-function cumpleaños(persona) {
+function cumpleanos(persona) {
 
   return {
     ...persona,
