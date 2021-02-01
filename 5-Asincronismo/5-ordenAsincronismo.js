@@ -7,23 +7,27 @@ const opts = { crossDomain: true }
 function obtenerPersonaje(id, callback) {
   const url = `${API_URL}${PEOPLE_URL.replace(':id', id)}`
 
-  $.get(url, opts, function (character) {
-    console.log(`Hola, yo soy ${character.result.properties.name}`);
+  $.get(url, opts, callback).fail(function () {
+    console.log(`Sucedió un error. No se pudo obrener el personaje ${id}`)
   });
-
-  if (callback) {
-    callback();
-  }
 
 }
 
-obtenerPersonaje(1, function () {
-  obtenerPersonaje(2, function () {
-    obtenerPersonaje(3, function () {
-      obtenerPersonaje(4, function () {
-        obtenerPersonaje(5, function () {
-          obtenerPersonaje(6, function () {
-            obtenerPersonaje(7);
+obtenerPersonaje(1, function (character) {
+  console.log(`Hola, yo soy ${character.result.properties.name}`);
+  obtenerPersonaje(2, function (character) {
+    console.log(`Hola, yo soy ${character.result.properties.name}`);
+    obtenerPersonaje(3, function (character) {
+      console.log(`Hola, yo soy ${character.result.properties.name}`);
+      obtenerPersonaje(4, function (character) {
+        console.log(`Hola, yo soy ${character.result.properties.name}`);
+        obtenerPersonaje(5, function (character) {
+          console.log(`Hola, yo soy ${character.result.properties.name}`);
+          obtenerPersonaje(6, function (character) {
+            console.log(`Hola, yo soy ${character.result.properties.name}`);
+            obtenerPersonaje(7, function () {
+              console.log(`Hola, yo soy ${character.result.properties.name}`);
+            });
           });
         });
       });
