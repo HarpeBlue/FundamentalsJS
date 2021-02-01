@@ -20,5 +20,11 @@ function onError(id) {
 obtenerPersonaje(1)
   .then((character) => {
     console.log(`El personaje 1 es ${character.result.properties.name}`)
+    return obtenerPersonaje(2);
+  })
+  .then((character) => {
+    console.log(`El personaje 2 es ${character.result.properties.name}`)
   })
   .catch(onError)
+
+// para retornar otra promesa usamos el key word return.
